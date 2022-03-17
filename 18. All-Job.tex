@@ -1,0 +1,218 @@
+\documentclass[letterpaper,10pt]{book}
+% Change to 10 pt
+\usepackage{pdfpages}
+\usepackage{morewrites}			% to counteract the no write space problem
+\setcounter{tocdepth}{5}
+
+\usepackage[framemethod=TikZ]{mdframed}
+
+\usepackage{fancyhdr}
+
+\usepackage{paralist}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+\usepackage{datetime}
+%\usepackage{ulem}
+
+%\usepackage[nottoc]{toobibind}
+
+\usepackage[inline]{enumitem}
+
+% Outer margin at 2.50 is exactly correct to fit the ``corruption alert'' tables
+\usepackage[inner=1.0in, outer=2.50in, top=2.54cm,bottom=2.54cm, marginparwidth=2.25in]{geometry}
+
+\usepackage{marginnote}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{xcolor}
+
+\usepackage{soul}
+
+\usepackage{marginnote}
+\usepackage{imakeidx} 
+\usepackage[
+	backref=true,
+	style=numeric,
+%	citestyle=numeric,
+	backend=bibtex
+	]{biblatex}
+\usepackage[driverfallback=hypertex,colorlinks=True]{hyperref}
+\usepackage{cleveref}
+
+\makeindex[name=scripture,columnsep=20pt, columnseprule=True,columns=3, title=Scripture References]
+\makeindex[name=speaker,columnsep=20pt, columnseprule=True,,columns=2, title=Sermon Creator]
+\makeindex[name=series,columnsep=20pt, columnseprule=True,,columns=2, title=Sermon Series]
+\makeindex[name=date,columnsep=20pt, columnseprule=True,columns=2, title=Sermon Date]
+
+\makeindex[name=event,columnsep=20pt, columnseprule=True,columns=2, title=Event]
+
+\makeindex[name=topic,columnsep=20pt, columnseprule=True,columns=2, title=Topic]
+\makeindex[name=AWIP,columnsep=20pt, columnseprule=True,columns=3, title=All Words in Passage]
+\makeindex[name=NWIV,columnsep=20pt, columnseprule=True,columns=3, title=Number of Words in Verse]
+\makeindex[name=PNIP,columnsep=20pt, columnseprule=True,columns=3, title=Proper Names in Passage]
+\makeindex[name=PEIP,columnsep=20pt, columnseprule=True,columns=2, title=Prophetic Events in Passage]
+
+
+\makeindex[name=TWPAQ,columnsep=20pt, columnseprule=True,columns=1, title=13-Word Phrases and Quotes]
+\makeindex[name=PFTTIS,columnsep=20pt, columnseprule=False,columns=3, title=Phrases found 13 times in scripture]
+\makeindex[name=WFTTIS,columnsep=20pt, columnseprule=False,columns=3, title=Words found 13 times in scripture]
+\makeindex[name=WFITV,columnsep=20pt, columnseprule=False,columns=3, title=Words found in exactly 13 verses]
+\makeindex[name=EVENTS,columnsep=20pt, columnseprule=False,columns=2, title=Sermon Log by Place]
+\makeindex[name=QUESTIONS,columnsep=20pt, columnseprule=False,columns=2, title=Bible Questions]
+
+\makeindex[name=DOCTRINES,columnsep=20pt, columnseprule=False,columns=2, title=Doctrines]
+
+\makeindex[name=SONGS,columnsep=20pt, columnseprule=False,columns=1, title=Songs]
+\makeindex[name=LOCATION,columnsep=20pt, columnseprule=False,columns= 2, title=Location]
+\makeindex[name=FACEBOOK,columnsep=20pt, columnseprule=False,columns=2, title=Facebook]
+
+\makeindex[name=DEVOTIONAL,columnsep=20pt, columnseprule=False,columns=1, title=Devotionals]
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE,RO]{\today}
+\fancyhead[RE,LO]{Notes, Outlines, Comments}
+\fancyhead[CE,CO]{-page \thepage  - }
+
+\fancyfoot[CO,CE]{\leftmark}
+%\fancyfoot[LE,RO]{CSCE 692, HW1}
+
+\title{DBR\\
+Daily \\ Reads}
+\author{Keith Anthony \\
+\today }
+%\title
+
+%+/ffffff +   \pagenumbering{gobble}
+
+\bibliography{Bibliographies/All20220108}
+
+%%%%% TWEAKS:
+%%% - distance from fcolorbox frame to text
+\setlength{\fboxsep}{1.0pt}
+
+\usepackage[utf8]{inputenc}
+\usepackage{tikz}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\begin{titlepage}
+
+% Set the text of the page to right-aligned until \end{flushright}
+\begin{flushright}
+\rightskip=-2.5cm
+
+\includegraphics[width=50mm,scale=1.5]{Melchisedec.jpg}
+\vspace{0.4in}
+
+% Create a title for the document and write it in bold font
+\LARGE{\textbf{\date}}
+\linebreak
+
+\vspace{0.5in}
+
+
+\begin{flushleft}
+\LARGE{Hebrews\\}\vspace{0.25in}
+\LARGE{Notes, Outlines, Comments}
+\end{flushleft}
+
+% write in large letters
+%\large{Free webservices and apps}
+
+% Skip some space
+\vspace{0.6in}
+
+%\large{Documentation}
+% Skip some space
+
+\bigskip
+
+\normalsize{Xenia, Oh.\\}
+\normalsize{created: \today}
+
+% Skip some space
+\vspace{1.3in}
+
+\end{flushright}
+% End the title page
+\end{titlepage}
+
+%\titlehttps://www.overleaf.com/project/60d732302fc633866943c9d2JE
+
+\newpage 
+
+\tableofcontents\hypertarget{TOC}{}
+\listoffigures
+\listoftables
+
+\hyphenation{A-bim-e-lech bre-thren E-phra-im  Gib-e-o-nites Jer-u-sa-lem through-out Phil-i-stines The-o-phil-us Am-a-le-kites ven-geance Mesh-el-e-mi-ah onan-ism Phar-a-oh Py-thon thoughts grev-ous-ness Hach-a-liah adul-ter-er Shad-rach}
+
+%\fcolorbox{black}{bone}{TEXT}
+\input{colors}
+
+\input{MyFrames}
+
+%\input{PFTTIS}
+%\input{WFTTIS}
+%\input{WFITV}
+
+
+\input{58NT-Hebrews/Hebrews4-TextExtrasWHighlights}
+\input{58NT-Hebrews/Hebrews4-Comments}
+%\input{58NT-Hebrews/Hebrews4-WordIndex}
+\input{58NT-Hebrews/Hebrews4-MyOutlines}
+\input{58NT-Hebrews/Hebrews4-OutlinesFromOthers}
+%\input{58NT-Hebrews/Hebrews4-Statistics}
+\input{58NT-Hebrews/Hebrews4-RepeatedPhrases}
+
+
+
+
+
+
+
+%\input{Template}
+\scriptsize
+
+\chapter{Indices}
+
+\printindex[DOCTRINES]
+
+\printindex[speaker]
+\printindex[FACEBOOK]
+\printindex[LOCATION]
+
+\printindex[AWIP]
+%\printindex[NWIV]
+%\printindex[PEIP]
+\printindex[TWPAQ]
+\printindex[EVENTS]
+%\printindex[QUESTIONS]
+%\printindex[SONGS]
+%\printindex[SONGS]
+%\printindex[PNIP]
+%\printindex[ASTRO]
+%\printindex[AS]
+%\printindex[PFTTIS]
+%\printindex[WFTTIS]
+%\printindex[WFITV]
+
+
+
+\printindex[series]
+\printindex[date]
+\printindex[event]
+\printindex[DEVOTIONAL]
+%\printindex[topic]
+
+%\printindex[scripture]
+
+
+\printbibliography
+\end{document}
